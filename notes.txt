@@ -1,0 +1,69 @@
+1. <!DOCTYPE html>
+- Non è un vero tag HTML, ma una dichiarazione.
+- Dice al browser che stiamo usando HTML5.
+- Serve a far renderizzare correttamente la pagina.
+
+2. <html> … </html>
+- Racchiude tutto il contenuto della pagina.
+- L’attributo lang="it" indica la lingua principale della pagina (italiano).
+
+3. <head> … </head>
+- Contiene informazioni sulla pagina, ma non visibili sul sito.
+- Qui metti il titolo, link ai CSS, meta tag ecc.
+
+4. <meta>
+- Fornisce informazioni aggiuntive al browser o ai motori di ricerca.
+- charset="UTF-8" → codifica dei caratteri
+- name="viewport" → regola come la pagina appare su dispositivi mobili
+
+5. <title> … </title>
+- Titolo della pagina, visibile nella scheda del browser.
+
+6. <link>
+- Serve per collegare file esterni come CSS o favicon.
+- Qui collega style.css per lo stile della pagina.
+
+7. <body> … </body>
+- Contiene tutto ciò che vediamo sul sito: testo, immagini, pulsanti, sezioni.
+
+8. <header> … </header>
+- Sezione introduttiva o intestazione del sito.
+- Di solito contiene logo, titolo, menu di navigazione o foto profilo.
+
+9. <div> … </div>
+- Contenitore generico per raggruppare elementi.
+- Può avere classi o id per applicare stili CSS.
+
+10. <h1> … </h1>
+- Titolo principale della pagina.
+- <h2> … <h6> → titoli secondari o sottosezioni, <h1> è il più importante per SEO.
+
+11. <p> … </p>
+- Paragrafo di testo.
+- Serve per contenuti testuali, separa blocchi di testo.
+
+12. <img>
+- Inserisce un’immagine.
+- src="tua-foto.jpg" → percorso dell’immagine
+- alt="Foto profilo" → testo alternativo importante per accessibilità e SEO.
+
+13. <main> … </main>
+- Contiene il contenuto principale della pagina.
+- Aiuta accessibilità e SEO a capire cosa è centrale nel sito.
+
+14. <section> … </section>
+- Sezione autonoma della pagina, utile per raggruppare contenuti correlati.
+- Qui viene usata per i post in evidenza.
+
+15. <footer> … </footer>
+- Contenuto di chiusura della pagina: copyright, contatti, link utili.
+
+16. Commenti HTML <!-- ... -->
+- Non vengono mostrati nel browser.
+- Servono a spiegare il codice a chi legge.
+Esempio: <!-- Questo è un commento -->
+
+17. NavBar
+- Navbar = barra di navigazione, di solito in cima al sito.
+- Contiene link verso le varie sezioni della pagina (Home, Chi Sono, Contatti, ecc.).
+- Può essere orizzontale o verticale, fissa o scorrevole.

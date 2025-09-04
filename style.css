@@ -1,0 +1,176 @@
+/* ------------------------ */
+/* VARIABILI GLOBALI */
+/* ------------------------ */
+:root {
+  --spazio-base: 6vw; /* Spazio di base fluido (in base alla larghezza viewport) */
+}
+
+/* ------------------------ */
+/* RESET DI BASE */
+/* ------------------------ */
+html, body {
+  max-width: 100%;       /* Evita scroll orizzontale */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  margin: 0;
+  min-height: 100vh;        /* Copre almeno l’altezza dello schermo */
+  display: flex;
+  flex-direction: column;   /* Layout verticale */
+  background: radial-gradient(circle, rgba(66,45,23,1) 0%, rgba(13,13,13,1) 100%);
+  color: white;
+}
+
+/* ------------------------ */
+/* HEADER */
+/* ------------------------ */
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  padding: 5vh 8vw 5vh var(--spazio-base); /* padding proporzionale */
+  background: rgba(0,0,0,0.3);
+}
+
+header .info { 
+  max-width: 60%; /* Limita la larghezza del testo */
+}
+
+header h1 {
+  margin: 0 0 1vh;
+  font-size: clamp(1.5rem, 4vw, 3rem); /* titolo fluido */
+}
+
+header p { 
+  font-size: clamp(1rem, 1.5vw, 1.8rem); /* testo fluido */
+  margin: 0; 
+  color: #ffffff; 
+  line-height: 1.8;
+  text-align: justify;
+}
+
+header img {
+  border-radius: 20%;
+  width: clamp(150px, 25vw, 240px); /* dimensione proporzionale con limiti */
+  height: auto;                     /* mantiene proporzioni naturali */
+  object-fit: cover;                /* riempie senza deformare */
+  border: 0.3vw solid #393838;      /* bordo proporzionale */
+  align-self: center;               /* garantisce centratura anche se il testo cambia */
+}
+
+/* ------------------------ */
+/* NAVBAR */
+/* ------------------------ */
+.navbar {
+  width: 100%;
+  padding: 2vh var(--spazio-base);
+  margin: 2vh 0;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 4vw;  /* spazio tra i link fluido */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgba(244,230,191,0.673);
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.2vw, 1.5rem); /* link fluidi */
+  transition: color 0.2s;
+}
+
+.navbar a:hover { color: #fff; }
+
+/* ------------------------ */
+/* MAIN */
+/* ------------------------ */
+main {
+  flex: 1;
+  padding: 2vh 8vw 2vh var(--spazio-base); /* padding fluido */
+}
+
+.featured { 
+  margin-top: 2vh; 
+  margin-bottom: 4vh;
+}
+
+.featured h2 {
+  margin-bottom: 5vh;
+  font-size: clamp(1.5rem, 3vw, 3rem); /* sottotitolo fluido */
+  text-align: center;
+}
+
+.featured-posts {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;  /* i box vanno a capo se lo schermo è piccolo */
+  justify-content: center;
+}
+
+.post {
+  /*min-width: 20vw;   /* grandezza proporzionale 
+  max-width: 25vw;*/
+  width: 350px;
+  height: 300px;      /* altezza proporzionale alla larghezza */
+  position: relative;
+  border-radius: 1vw; /* bordo fluido */
+  padding: 0;
+  background: rgba(255,255,255,0.05);
+  overflow: hidden;  
+  box-sizing: border-box;
+}
+
+.post blockquote.instagram-media {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+.post blockquote.instagram-media iframe {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* Bordo sfumato intorno ai post */
+.post::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1vw;
+  background: linear-gradient(45deg, #3b70bb, #52c36c, #c9437b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  padding: 0.3vw; /* bordo scalabile */
+}
+
+/* Effetto hover */
+.post:hover {
+  transform: translateY(-0.5vh);
+}
+
+/* ------------------------ */
+/* FOOTER */
+/* ------------------------ */
+footer {
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  padding: 2vh 8vw 2vh var(--spazio-base); /* padding fluido */
+  margin-top: auto;
+  font-size: clamp(0.8rem, 1vw, 1.2rem); /* testo fluido */
+}
